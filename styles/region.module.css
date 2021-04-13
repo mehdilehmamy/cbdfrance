@@ -1,0 +1,48 @@
+.header {
+    background: url('/cbd-header.jpg');
+    background-size: cover;
+    background-position: top;
+    font-family: 'Quicksand';
+    text-align: center;
+    color: white;
+    padding: 8rem 4rem;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+  }
+
+
+
+.departement {
+        padding: 4rem 5rem;
+}
+
+.departhead {
+    width: 90%;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+  }
+
+.ville {
+   
+    padding: 4rem 3rem;
+}
+
+.infocontainer {
+    max-width: 30%;
+    margin-right: 3rem;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.2);
+    float: left;
+}
+
+.flowers {
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+

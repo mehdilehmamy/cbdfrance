@@ -1,65 +1,99 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import CityCard from "../components/CityCard"
+import PersonPinIcon from '@material-ui/icons/PersonPin'
+import HowToVoteIcon from '@material-ui/icons/HowToVote'
+import PersonIcon from '@material-ui/icons/Person'
+import StarBorderIcon from '@material-ui/icons/StarBorder'
+import ReorderIcon from '@material-ui/icons/Reorder'
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 
 export default function Home() {
+  const cities = ['Paris', 'Marseille', 'Lyon', 'Toulouse', 'Nice', 'Nantes', 'Montpellier', 'Strasbourg', 'Bordeaux', 'Lille', 'Rennes', 'Clermont'];
+ 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <section className={styles.header}>
+        <h1>Acheter du CBD en France</h1>
+        <h3>Découvrez les villes et régions avec les variétés de CBD les mieux notées</h3>
+      </section>
+      <section className={styles.features}>
+        <div className="row">
+					<div className="col-md-12">
+						<div className={styles.featureHeading}>
+							<h2>Découvrez Et Votez Pour Votre Variété Préférée</h2>
+							<p>Notre plateforme resence les différentes variétés de cannabis CBD et vous permet de trouver les variétés CBD les mieux classées d'après les votes de votre commune.</p>
+						</div>
+					</div>
+				</div>
+        <div className="row">
+          <div className="col-md-4 col-sm-12">
+					  	<div className={styles.featurebox}>
+              <div className={styles.featureIcon}><PersonPinIcon fontSize="large"/></div>
+							  <h4>Choisissez votre ville</h4>
+							  <p>Sélectionnez la Région et le département de votre ville en bas de page.</p>
+						  </div>
+					</div>
+          <div className="col-md-4 col-sm-12">
+					  	<div className={styles.featurebox}>
+              <div className={styles.featureIcon}><HowToVoteIcon fontSize="large"/></div>
+						  
+							  <h4>Trouvez les meilleures variétés</h4>
+							  <p>Les meilleures variétées sont classées selon vos votes, vous pouvez voir le classement dans votre commune, ou directement de votre département.</p>
+						  </div>
+					</div>
+          <div className="col-md-4 col-sm-12">
+					  	<div className={styles.featurebox}>
+                <div className={styles.featureIcon}><PersonIcon fontSize="large"/></div>
+						  	
+							  <h4>Connectez-vous pour voter</h4>
+							  <p>Créez votre compte et connectez-vous pour participer au classement des variétés CBD.</p>
+						  </div>
+					</div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </section>
+      <section className={styles.cities}>
+         <div className={styles.cityHeading}>
+						<h2>Acheter Du CBD Dans Votre Ville En France</h2>
+						<p>Trouvez les différentes variétés ainsi que les CBD Shop disponible dans les plus grandes villes de France.</p>
+				 </div>
+         <div className="row">
+            {cities.map((city) => {
+              return <CityCard city={city}/>
+            })}
+         </div>
+      </section>
+      <section className={styles.stats}>
+        <div className="row">
+        <div className="col-md-3 col-sm-12">
+					  	<div className={styles.featurebox}>
+              <div className={styles.statIcon}><StarBorderIcon fontSize="large"/></div>
+							  <h4>1200+</h4>
+							  <p>Variétés différentes</p>
+						  </div>
+					</div>
+          <div className="col-md-3 col-sm-12">
+					  	<div className={styles.featurebox}>
+              <div className={styles.statIcon}><ReorderIcon fontSize="large"/></div>
+							  <h4>25000+</h4>
+							  <p>Votes</p>
+						  </div>
+					</div>
+          <div className="col-md-3 col-sm-12">
+					  	<div className={styles.featurebox}>
+              <div className={styles.statIcon}><InsertEmoticonIcon fontSize="large"/></div>
+							  <h4>1800+</h4>
+							  <p>Utilisateurs actifs</p>
+						  </div>
+					</div>
+          <div className="col-md-3 col-sm-12">
+					  	<div className={styles.featurebox}>
+              <div className={styles.statIcon}><PersonPinIcon fontSize="large"/></div>
+							  <h4>30000+</h4>
+							  <p>Communes</p>
+						  </div>
+					</div>
+        </div>
+      </section>
     </div>
   )
 }
