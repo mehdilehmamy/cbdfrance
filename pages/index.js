@@ -6,9 +6,49 @@ import PersonIcon from '@material-ui/icons/Person'
 import StarBorderIcon from '@material-ui/icons/StarBorder'
 import ReorderIcon from '@material-ui/icons/Reorder'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
+import Link from "next/link"
 
 export default function Home() {
-  const cities = ['Paris', 'Marseille', 'Lyon', 'Toulouse', 'Nice', 'Nantes', 'Montpellier', 'Strasbourg', 'Bordeaux', 'Lille', 'Rennes', 'Clermont'];
+  const cities = [
+	  {
+		  name:'Paris',
+		  id: '71343'
+	}, {
+		name: 'Marseille',
+		id: '13055'
+	},  {
+		name: 'Lyon',
+		id: '42059'
+	}, {
+		name: 'Toulouse',
+		id: '31555'
+	}, {
+		name: 'Nice',
+		id: '06088'
+	}, {
+		name: 'Nantes',
+		id: '44109'
+	}, {
+		name: 'Montpelier',
+		id: '34172'
+	}, 
+	{
+		name: 'Strasbourg',
+		id: '67482'
+	}, {
+		name: 'Bordeaux',
+		id: '33013'
+	}, {
+		name: 'Lille',
+		id: '59350'
+	}, {
+		name: 'Rennes',
+		id: '35238'
+	}, {
+		name: 'Clermont',
+		id: '38242'
+	}
+	];
  
   return (
     <div className={styles.container}>
@@ -56,9 +96,11 @@ export default function Home() {
 						<h2>Acheter Du CBD Dans Votre Ville En France</h2>
 						<p>Trouvez les différentes variétés ainsi que les CBD Shop disponible dans les plus grandes villes de France.</p>
 				 </div>
-         <div className="row">
+         <div className={styles.citygrid}>
             {cities.map((city) => {
-              return <CityCard city={city}/>
+              return <Link href={`/commune/${city.id}`} passHref>
+                        <a className={styles.cardstyle}><CityCard city={city.name}/></a>
+                     </Link>
             })}
          </div>
       </section>

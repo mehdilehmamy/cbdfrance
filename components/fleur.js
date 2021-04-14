@@ -35,7 +35,7 @@ const fleur = [
         link: "https://marycannacbdshop.com/product/fleur-cbd-gelato-indoor-indica/"
     },
     {
-        name: "Fleur Critical Greenhouse",
+        name: "Critical Greenhouse",
         genetic: "INDICA",
         price: "5€ /g",
         image: "/critical.jpg",

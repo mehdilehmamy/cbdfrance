@@ -86,3 +86,46 @@
   text-align: center;
 }
 
+.citygrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardstyle {
+  background-color: #81b214;
+  font-family: "Quicksand";
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  border-radius: 15px;
+  min-width: 30%;
+  margin-bottom: 1rem;
+  border: 1px solid #81b214;
+  text-decoration: none !important;
+  transition: color .3s ease, background-color .2s ease;
+}
+
+.cardstyle:hover {
+  color: #81b214 !important;
+  background-color: white;
+}
+
+@media screen and (max-width: 760px) {
+  .citygrid {
+    flex-direction: column;
+  }
+  .features {
+    padding: 4rem 2rem;
+  }
+  
+  .cities {
+    padding: 4rem 2rem;
+  }
+  .header {
+    padding: 5rem 2rem;
+  }
+}
+
+
+

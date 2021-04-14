@@ -1,5 +1,6 @@
 import style from "../../styles/region.module.css";
 import CityCard from "../../components/CityCard";
+import Link from "next/link";
 
 
 export const getStaticPaths = async () => {
@@ -43,9 +44,11 @@ export default function region({communes, departName}) {
                <div className={style.departhead}>
 					<h2>Acheter du CBD à {departName}</h2>
 				</div>
-                <div className="row">
+                <div className={style.citygrid}>
             {communes.map((commune) => {
-              return <CityCard city={commune.nom} href={`/commune/${commune.code}`}/>
+              return <Link href={`/commune/${commune.code}`} passHref>
+                        <a className={style.cardstyle}><CityCard city={commune.nom}/></a>
+                     </Link>
             })}
          </div>
             </section>

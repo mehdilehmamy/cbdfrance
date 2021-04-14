@@ -14,11 +14,12 @@
     cursor: pointer;
     color: whitesmoke;
     transition: .2s ease;
+    text-decoration: none !important;
+    transition: color .2s ease;
 }
 
 .link:hover {
-    color: white;
-    transform: translateX(10px);
+    color: #81b214 !important;
 }
 
 .copyright {
@@ -27,3 +28,9 @@
     text-align: center;
     color: rgba(187, 186, 186, 0.87);
 }
+
+@media screen and (max-width: 760px) {
+    .list{
+        padding-left: 0 !important;
+    }
+  }

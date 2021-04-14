@@ -6,6 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -15,5 +16,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.footer {
+  background-color: #1b1717 !important;
+  padding: 2rem 3rem 0 3rem !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    padding: 2rem 1rem !important; 
+    text-align: center !important;
+  }
 }
 

@@ -9,7 +9,6 @@
 }
 
 .varcard:hover {
-    transform: scale(1.006);
     box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);
 }
 
@@ -35,5 +34,11 @@
     color: #81b214;
 }
 
+@media screen and (max-width: 760px) {
+    .varcard {
+        width: 100%;
+        margin: 1rem auto;
+    }
+  }
 
 

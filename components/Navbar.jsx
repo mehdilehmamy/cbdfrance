@@ -6,8 +6,7 @@ export default function Navbar() {
     return (
         <nav className="navbar navbar-default navbar-fixed navbar-transparent">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/" style={{color: "black", fontFamily: "Quicksand"}}><SpaIcon /> CBD France</a>
-          <button className="btn btn-outline-success"><PersonIcon/> Se connecter</button>
+          <a className="navbar-brand navimage" href="/" style={{color: "black", fontFamily: "Quicksand"}}><SpaIcon /> CBD France</a>
         </div>
       </nav>
     )
