@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $POST",
+    "heroku-postbuild": "npm start build"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
