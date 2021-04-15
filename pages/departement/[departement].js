@@ -23,11 +23,12 @@ export const getStaticProps = async (context) => {
     const departement = context.params.departement;
     const res = await fetch(`https://geo.api.gouv.fr/departements/${departement}/communes`);
     const data = await res.json();
+    const newData = data.slice(1, 49);
 
     const resName = await fetch(`https://geo.api.gouv.fr/departements/${departement}`);
     const dataName = await resName.json();
     return {
-        props: {communes : data, departName: dataName.nom},
+        props: {communes : newData, departName: dataName.nom},
         revalidate: 60
     }
 }
@@ -52,9 +53,6 @@ export default function region({communes, departName}) {
                      </Link>
             })}
          </div>
-            </section>
-            <section className={style.variety}>
-                <h2 className={style.varhead}>Les 6 variétés CBD les plus apprécies en {departName}</h2>
             </section>
         </div>
     )

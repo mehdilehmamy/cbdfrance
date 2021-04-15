@@ -56,7 +56,7 @@ export default function Footer() {
 							</div>
 						</div>
                         <div class={styles.copyright}>
-					<p>Copyright @ EXEMPLE.com 2021 <a href="#" title="Acheter du CBD" style={{color: "#81b214"}}>CBD France</a></p>
+					<p>Copyright @ acheterducbd.com 2021 <a href="#" title="Acheter du CBD" style={{color: "#81b214"}}>CBD France</a></p>
 				</div>
 					</div>
             </div>
