@@ -27,7 +27,8 @@ export const getStaticProps = async (context) => {
     const resName = await fetch(`https://geo.api.gouv.fr/departements/${departement}`);
     const dataName = await resName.json();
     return {
-        props: {communes : data, departName: dataName.nom}
+        props: {communes : data, departName: dataName.nom},
+        revalidate: 60
     }
 }
 
