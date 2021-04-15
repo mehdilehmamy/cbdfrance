@@ -23,7 +23,7 @@ export const getStaticProps = async (context) => {
     const departement = context.params.departement;
     const res = await fetch(`https://geo.api.gouv.fr/departements/${departement}/communes`);
     const data = await res.json();
-    const newData = data.slice(1, 21);
+    const newData = data.sort(() => 0.5 - Math.random()).slice(0, 49);
 
     const resName = await fetch(`https://geo.api.gouv.fr/departements/${departement}`);
     const dataName = await resName.json();
