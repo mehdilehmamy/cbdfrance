@@ -6,8 +6,9 @@ import fleur from "../../components/fleur.js";
 export const getStaticPaths = async () => {
     const res = await fetch('https://geo.api.gouv.fr/communes');
     const data = await res.json();
+    const newData = data.slice(1, 15000);
 
-    const paths = data.map((commune)=> {
+    const paths = newData.map((commune)=> {
         return {
             params: {commune: commune.code.toString()}
         }
