@@ -12,13 +12,13 @@ export default function Home() {
   const cities = [
 	  {
 		  name:'Paris',
-		  id: '71343'
+		  id: '75056'
 	}, {
 		name: 'Marseille',
 		id: '13055'
 	},  {
 		name: 'Lyon',
-		id: '42059'
+		id: '69123'
 	}, {
 		name: 'Toulouse',
 		id: '31555'

@@ -13,6 +13,19 @@ export default function Layout({children}) {
                 <meta name="keywords" content="acheter, cbd, france, cbd shop, cbd france, cannabis france, cannabidiol" />
                 <meta property="og:title" content="Livraison de CBD à domicile en France - Acheter CBD" />
                 <meta property="og:description" content="Découvrez les variétés CBD les plus populaires dans votre département classé d'après vos votes." />
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZP6GYVPK"></script>
+                <script
+                  dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GBZP6GYVPK', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+                />
             </Head>
             <Navbar />
                 {children}
