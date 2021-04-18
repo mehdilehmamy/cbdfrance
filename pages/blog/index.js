@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "../../styles/blog.module.css";
 import {createClient} from "contentful";
-import BlogCard from "./BlogCard";
+import BlogCard from "../../components/BlogCard";
 
 export async function getStaticProps () {
     const client = createClient({
